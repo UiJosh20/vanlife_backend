@@ -19,6 +19,9 @@ app.get('/api/vans', (req, res) => {
     res.send(vans);
 });
 
+app.get('/', (req, res)=>{
+    res.send("Hello Galaxy")
+})
 app.get('/api/vans/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const van = vans.find(van => van.id === id);
